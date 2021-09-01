@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+
+const array1 = ['タスク1','タスク2','タスク3'];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="todos">
+      {array1.map(task => (
+        <div>
+          <input type="text" value={task}/>
+          <button>削除</button>
+          <button>完了</button>
+        </div>
+      ))}
+      </div>
   );
 }
 
